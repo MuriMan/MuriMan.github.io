@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Latin Modern Roman';
+    src: url('fonts/lmroman-normal.woff2') format('woff2'),
+         url('fonts/lmroman-normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+	background: #1d2021;
+	color: #ebdbb2;
+    font-family: 'Latin Modern Roman', monospace;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	margin: 10px;
+	border-bottom: 2px solid #ebdbb2;
+}
+
+a {
+	text-decoration: none;
+	/* color: #ebdbb2; /* Light blue */ */
+	font-size: 1em;
+	font-size: 24px;
+}
+
+h1 {
+	position: relative; /* Establish a positioning context */
+	/* text-align: center; /* Optional: center-align text */ */
+	margin: 20px 0; /* Add vertical spacing around the headers */
+}
+
+h1::after {
+	content: ''; /* Required for the pseudo-element */
+	position: absolute;
+	bottom: -10px; /* Position the underline 10px below the text */
+	left: 0%; /* Start the underline slightly indented from the left */
+	width: 100%; /* Make the underline span 80% of the screen width */
+	height: 2px; /* Set the thickness of the underline */
+	background-color: #ebdbb2; /* Color of the underline */
+}
+
+.month {
+	width: 1000px;
+	margin: auto;
+	text-align: left;
+}
+
+div {
+	margin: auto;
+	width: 800px;
+	text-align: justify;
+	font-size: 24px;
+}
+
+@media (max-width: 1024px) and (min-width: 600px) {
+    div {
+		width: 400px;
+    }
+}
+
+.container {
+    display: flex; /* Enable flexbox layout */
+    gap: 10px; /* Add spacing between boxes */
+	grid-auto-flow: column;
+}
+
+.box {
+	flex: 1;
+    text-align: justify;
+}
+
+#header {
+	font-size: 48px;
+}
+
+.underlineRef:hover {
+	text-decoration: underline;
+}
+
+.tabbed {
+	text-indent:2em
+}
+
+.center {
+	text-align: center;
+}
