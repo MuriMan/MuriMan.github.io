@@ -5,6 +5,13 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Latin Modern Roman';
+    src: url('fonts/lmroman-bold.woff2') format('woff2'),
+         url('fonts/lmroman-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: bold;
+}
 * {
 	background: #1d2021;
 	color: #ebdbb2;
@@ -17,7 +24,7 @@ header {
 	justify-content: space-between;
 	padding: 10px 20px;
 	margin: 10px;
-	border-bottom: 2px solid #ebdbb2;
+	border-bottom: 1px solid #ebdbb2;
 }
 
 a {
@@ -75,6 +82,8 @@ div {
 
 #header {
 	font-size: 48px;
+	font-style: bold;
+	text-align: center;
 }
 
 .underlineRef:hover {
@@ -87,4 +96,12 @@ div {
 
 .center {
 	text-align: center;
+}
+
+.circle-image {
+	width: 300px;          /* Set width of the image */
+	height: 300px;         /* Set height of the image */
+	border-radius: 50%;    /* Make it a circle */
+	border: 5px solid transparent; /* Add a border around the circle */
+	object-fit: cover;     /* Ensure the image fits inside the circle */
 }
