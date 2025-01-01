@@ -45,7 +45,6 @@ h1 {
 	/* position: relative; /* Establish a positioning context */ */
 	/* text-align: center; /* Optional: center-align text */ */
 	margin: auto; /* Add vertical spacing around the headers */
-	width: 800px;
 	text-align: center;
 }
 
