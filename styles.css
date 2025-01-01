@@ -44,10 +44,69 @@ div {
     text-justify: inter-word;
     hyphens: auto;
 }
+@media (max-width: 480px) {
+    body, html {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
 
-@media (max-width: 1024px) {
     div {
-        width: 300px;
+        width: 90%;
+        max-width: 300px;
+        font-size: 10px; /* Reduced font size for all text in div */
+        text-align: justify;
+        line-height: 1.4;
+        /* padding: 10px; */
+    }
+
+    .underlineRef, .article {
+        font-size: 10px !important; /* Unified small size for links */
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .underlineRef::after, .article::after {
+        height: 1px;
+    }
+
+    .circle-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* padding: 10px; */
+        width: 100%;
+    }
+
+    .murih {
+        font-size: 14px; /* Reduced header font size */
+        text-align: center;
+    }
+
+    a {
+        font-size: 10px; /* Reduced font size for links */
+        margin: 5px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .box {
+        font-size: 10px; /* Unified small size for all text */
+        text-align: justify;
+        width: 100%;
+        margin: 10px 0;
     }
 }
 
@@ -72,7 +131,7 @@ header {
     color: #ebdbb2;
 }
 
-#header {
+.murih {
     font-size: 48px;
     font-weight: bold;
     text-align: center;
