@@ -5,98 +5,19 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face { font-family: 'Latin Modern Roman';
+@font-face {
+    font-family: 'Latin Modern Roman';
     src: url('fonts/lmroman-bold.woff2') format('woff2'),
          url('fonts/lmroman-bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
-	font-family: 'Latin Modern Roman';
-	src: url('fonts/lmroman-italic.woff2') format('woff2'),
-		 url('fonts/lmroman-italic.woff') format('woff');
-	font-weight: normal;
-	font-style: italic;
-}
-
-.mjx-container, .katex {
-	font-family: inherit; 
-	font-size: 1em;       
-	line-height: normal;  
-}
-
-.math-container {
-	overflow: visible; 
-}
-
-div {
-	margin: auto;
-	width: 800px;
-	text-align: justify;
-	font-size: 24px;
-}
-
-@media (max-width: 1024px) and (min-width: 600px) {
-	div {
-		width: 400px;
-	}
-}
-
-.container {
-	display: flex;
-	gap: 10px;
-	grid-auto-flow: column;
-}
-
-.box {
-	flex: 1;
-	text-align: justify;
-}
-
-header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 10px 20px;
-	margin: 10px;
-	border-bottom: 1px solid #ebdbb2;
-	color: #ebdbb2
-}
-
-#header {
-	font-size: 48px;
-	font-weight: bold;
-	text-align: center;
-}
-
-a {
-	text-decoration: none;
-	font-size: 24px;
-	color: #ebdbb2;
-}
-
-.circle-image {
-	width: 300px;
-	height: 300px;
-	border-radius: 50%;
-	border: 5px solid transparent;
-	object-fit: cover;
-}
-
-.article {
-	font-style: italic;
-}
-
-.article:hover {
-	text-decoration: underline;
-}
-
-.underlineRef:hover {
-	text-decoration: underline;
-}
-
-.center {
-	text-align: center;
+    font-family: 'Latin Modern Roman';
+    src: url('fonts/lmroman-italic.woff2') format('woff2'),
+         url('fonts/lmroman-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
 }
 
 body, html {
@@ -105,10 +26,105 @@ body, html {
     font-family: 'Latin Modern Roman', monospace;
 }
 
+.mjx-container, .katex {
+    font-family: inherit; 
+    font-size: 1em;       
+    line-height: normal;  
+}
+
+.math-container {
+    overflow: visible; 
+}
+
+div {
+    margin: auto;
+    width: 800px;
+    text-align: justify;
+    font-size: 24px;
+}
+
+@media (max-width: 1024px) and (min-width: 600px) {
+    div {
+        width: 400px;
+    }
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    grid-auto-flow: column;
+}
+
+.box {
+    flex: 1;
+    text-align: justify;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 10px;
+    border-bottom: 1px solid #ebdbb2;
+    color: #ebdbb2;
+}
+
+#header {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #ebdbb2;
+}
+
+.circle-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    object-fit: cover;
+}
+
+.center {
+    text-align: center;
+}
+
 .tabbed {
-	text-indent:2em
+    text-indent: 2em;
 }
 
 h1 {
-	text-align: center
+    text-align: center;
+}
+
+.underlineRef, .article {
+    text-decoration: none;
+    color: #ebdbb2;
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.underlineRef::after, .article::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ebdbb2;
+    transition: width 0.3s ease;
+}
+
+.underlineRef:hover::after, .article:hover::after {
+    width: 100%;
+}
+
+.article {
+    font-style: italic;
 }
