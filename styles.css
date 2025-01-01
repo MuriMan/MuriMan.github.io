@@ -9,11 +9,18 @@
     font-family: 'Latin Modern Roman';
     src: url('fonts/lmroman-bold.woff2') format('woff2'),
          url('fonts/lmroman-bold.woff') format('woff');
-    font-weight: normal;
-    font-style: bold;
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Latin Modern Roman';
+	src: url('fonts/lmroman-italic.woff2') format('woff2'),
+		 url('fonts/lmroman-italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
 }
 * {
-	background: #1d2021;
+	background: #282828;
 	color: #ebdbb2;
     font-family: 'Latin Modern Roman', monospace;
 }
@@ -35,25 +42,26 @@ a {
 }
 
 h1 {
-	position: relative; /* Establish a positioning context */
+	/* position: relative; /* Establish a positioning context */ */
 	/* text-align: center; /* Optional: center-align text */ */
-	margin: 20px 0; /* Add vertical spacing around the headers */
+	margin: auto; /* Add vertical spacing around the headers */
+	width: 800px;
+	text-align: center;
 }
 
-h1::after {
-	content: ''; /* Required for the pseudo-element */
-	position: absolute;
-	bottom: -10px; /* Position the underline 10px below the text */
-	left: 0%; /* Start the underline slightly indented from the left */
-	width: 100%; /* Make the underline span 80% of the screen width */
-	height: 2px; /* Set the thickness of the underline */
-	background-color: #ebdbb2; /* Color of the underline */
-}
+/* h1::after { */
+/* 	content: ''; /* Required for the pseudo-element */ */
+/* 	position: absolute; */
+/* 	bottom: -10px; /* Position the underline 10px below the text */ */
+/* 	left: 0%; /* Start the underline slightly indented from the left */ */
+/* 	width: 100%; /* Make the underline span 80% of the screen width */ */
+/* 	height: 2px; /* Set the thickness of the underline */ */
+/* 	background-color: #ebdbb2; /* Color of the underline */ */
+/* } */
 
-.month {
-	width: 1000px;
+h2 {
 	margin: auto;
-	text-align: left;
+	width: 800px;
 }
 
 div {
@@ -82,7 +90,7 @@ div {
 
 #header {
 	font-size: 48px;
-	font-style: bold;
+	font-weight: bold;
 	text-align: center;
 }
 
@@ -104,4 +112,12 @@ div {
 	border-radius: 50%;    /* Make it a circle */
 	border: 5px solid transparent; /* Add a border around the circle */
 	object-fit: cover;     /* Ensure the image fits inside the circle */
+}
+
+.article {
+	font-style: italic;
+}
+
+.article:hover {
+	text-decoration: underline;
 }
