@@ -36,7 +36,17 @@ body, html {
     overflow: visible; 
 }
 
-div {
+p {
+	text-indent: 2em;
+}
+
+q, blockquote {
+    quotes: "“" "”" "‘" "’";
+}
+div, p {
+	quotes: "“" "”" "‘" "’";
+	font-variant-ligatures: common-ligatures;
+	font-kerning: normal;
     margin: auto;
     width: 800px;
     text-align: justify;
