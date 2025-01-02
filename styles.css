@@ -106,6 +106,7 @@ a {
 
 h1 {
     text-align: center;
+	margin-bottom: 0.25em;
 }
 
 .underlineRef, .article {
@@ -133,4 +134,10 @@ h1 {
 
 .article {
     font-style: italic;
+}
+
+.date {
+	text-align: left;
+	font-size: 24px;
+	margin-bottom: 1em;
 }
